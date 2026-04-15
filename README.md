@@ -16,10 +16,9 @@ Q. Key Components of this semantic search pipeline <br>
 -  Logic Gate: In the previous stage, the query metadata is extracted and compared against the kb metadata to deterministically eliminate out of scope queries.<br> 
 -  Semantic Search <br>
 <br> 
-Filter out out-of-scope queries based on deterministic logic <br> 	
-dot product between query-embedding and kb-embeddings ( embeddings generated using Muvera approach for token wise late interaction model for better results) to rank the best matching kb-candidates <br> 
-gap-out ( high score plus difference between score of top two candidate) strategy to classify High Confidence match and best answer selection <br> 
-
+    * Filter out out-of-scope queries based on deterministic logic <br> 	
+    * dot product between query-embedding and kb-embeddings ( embeddings generated using Muvera approach for token wise late interaction model for better results) to rank the best matching kb-candidates <br> 
+    * gap-out ( high score plus difference between score of top two candidate) strategy to classify High Confidence match and best answer selection <br> 
 
 Q. Why use  Query Expansion/Rewriting <br> 
  Query Expansion/ Rewriting gives better performance against shorthand /ambiguous user generated query that may trip in vector search.<br>  
