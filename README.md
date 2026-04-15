@@ -1,9 +1,10 @@
 # HOW TO RUN
 ## Quick Start (uv)
-uv sync
-OPENAI_API_KEY="your_api_key_here" uv run python semantic_search.py
-For tests:
-OPENAI_API_KEY="your_api_key_here" uv run pytest test_script.py -v
+uv sync <br> 
+OPENAI_API_KEY="your_api_key_here" uv run python semantic_search.py <br> 
+<br>
+For tests:<br> 
+OPENAI_API_KEY="your_api_key_here" uv run pytest test_script.py -v <br> 
 
 
 ##  Submission FAQs
@@ -37,11 +38,12 @@ Key Challenges Faced::
 -> Calibrating the score to >0.95 or <0.5 - cosine similarity scores or relevance score did not land up in the such high ranges . 
 
 ## EVAL SETUP
+
 Defined a Vetted KB corpus as following : 
-[ "How many customers do I have", 
-"How many products do I have", 
-"How many products are in stock", 
-"List all my customers", "action": "LIST", "entity": "customer"}, ]
+- "How many customers do I have", 
+- "How many products do I have", 
+- "How many products are in stock", 
+- List all my customers" 
 
 ### Test Results 
 
