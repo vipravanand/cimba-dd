@@ -1,12 +1,4 @@
-# HOW TO RUN
-## Quick Start (uv)
-uv sync
-OPENAI_API_KEY="your_api_key_here" uv run python semantic_search.py
-For tests:
-OPENAI_API_KEY="your_api_key_here" uv run pytest test_script.py -v
-
-
-##  Submission FAQs
+Submission FAQs
 
 Q. Key Components of this semantic search pipeline
 → KB Ingestion - Pre-computed Muvera embeddings for the knowledge-base
@@ -36,42 +28,41 @@ This pipeline can be used for building an embedding fine tuning dataset as well.
 Key Challenges Faced:: 
 -> Calibrating the score to >0.95 or <0.5 - cosine similarity scores or relevance score did not land up in the such high ranges . 
 
-## EVAL SETUP
+EVAL SETUP
 Defined a Vetted KB corpus as following : 
 [ "How many customers do I have", 
 "How many products do I have", 
 "How many products are in stock", 
 "List all my customers", "action": "LIST", "entity": "customer"}, ]
 
-### Test Results 
+Test Results 
+
+
 
 Query
-
+Expected Status
+Expected Candidate
+Result
 How many customers?
 SUCCESS
 "How many customers do I have"
 ✅ 
-
 list customers
 SUCCESS
 "List all my customers"
-✅
-
+✅ 
 stock levels
 SUCCESS
 "How many products are in stock"
-✅
-
+✅ 
 customer count
 SUCCESS
 "How many customers do I have"
 ✅ 
-
 all my buyers
 SUCCESS
 "List all my customers"
 ✅ 
-
 customers
 SUCCESS
 "List all my customers"
@@ -80,12 +71,10 @@ generate report
 AMBIGUOUS
 None
 ✅ 
-
 total products
 SUCCESS
 "How many products do I have"
-❌ 
-
+❌ Fail
 product information
 AMBIGUOUS
 None
